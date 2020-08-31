@@ -32,4 +32,4 @@ jobs:
           ENV: ${{ secrets.ENV }}
       - run: sudo chmod 700 ./key
       - name: Deploy to hostinger
-        run: rsync -av --update -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
+        run: rsync -hvrPt -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
