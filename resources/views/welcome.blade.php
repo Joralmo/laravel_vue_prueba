@@ -82,7 +82,7 @@
             <div class="content" id="app">
                 <example-component></example-component>
                 <div class="title m-b-md">
-                    Laravel deploy
+                    Laravel
                 </div>
 
                 <div class="links">
