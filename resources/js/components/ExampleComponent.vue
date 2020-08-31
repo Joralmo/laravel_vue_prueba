@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Componente de ejemplo</div>
+                    <div class="card-header">Componente de ejemplo 2</div>
 
                     <div class="card-body">
                         Hola mundo
