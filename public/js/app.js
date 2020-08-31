@@ -37526,11 +37526,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v("Componente de ejemplo 2")
+              _vm._v("Componente de ejemplo")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v("\n                    Hola mundo\n                ")
+              _vm._v(
+                "\n                    Hola mundo, Make it better\n                "
+              )
             ])
           ])
         ])
