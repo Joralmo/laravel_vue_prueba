@@ -15,7 +15,7 @@ jobs:
       - name: Instalando php y composer
         uses: MilesChou/composer-action@master
         with:
-          args: install --ignore-platform-reqs
+          args: install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
       - name: Instalando node v12
         uses: actions/setup-node@v1
         with:
@@ -32,4 +32,4 @@ jobs:
           ENV: ${{ secrets.ENV }}
       - run: sudo chmod 700 ./key
       - name: Deploy to hostinger
-        run: rsync -hvrPt --ignore-existing -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
+        run: rsync -rav -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" --progress . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
