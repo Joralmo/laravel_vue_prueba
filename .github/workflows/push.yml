@@ -33,4 +33,4 @@ jobs:
           ENV: ${{ secrets.ENV }}
       - run: sudo chmod 700 ./key
       - name: Deploy to hostinger
-        run: rsync -rav -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" --progress --exclude "node_modules" . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
+        run: rsync -rav -e "ssh -i ./key -p ${{ secrets.REMOTE_PORT }} -oStrictHostKeyChecking=no" --progress --exclude={"node_modules","key"} . ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}:${{ secrets.TARGET }}
