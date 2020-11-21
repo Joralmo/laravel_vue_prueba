@@ -19,3 +19,7 @@
   * SERVER_SSH_KEY
   * TARGET
 * [x] configurar .github/workflows/push.yml
+
+
+# Update
+### En el archivo .github/workflows/push.yml se agrega un paso extra gracias a la contribución de [@kiviev](https://github.com/kiviev) para correr las migraciones una vez desplegado, para este paso es necesario actualizar el secret ENV y agregar los accesos correctos a la base de datos de hostinger.
